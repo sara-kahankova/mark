@@ -4,7 +4,6 @@ class CreatePackages < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :price
       t.text :description
-      t.references :reference, null: false, foreign_key: true
 
       t.timestamps
     end

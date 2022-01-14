@@ -16,8 +16,8 @@
 
 puts "Cleaning database..."
 Post.destroy_all
-Service.destroy_all
-Reference.destroy_all
+Package.destroy_all
+Review.destroy_all
 Rental.destroy_all
 
 puts "Creating posts..."
@@ -43,31 +43,30 @@ puts "Creating rentals..."
     city: Faker::Address.city
   )
 
-  puts "Created #{rental.id}..."
+  puts "Created #{rental.id} rentals..."
+end
+
+puts "Creating packages..."
+
+3.times do
+  package = Package.create(
+    name: Faker::Book.title,
+    description: Faker::Quote.famous_last_words,
+    price: rand(1000..15_000)
+  )
+  puts "Created #{package.id}..."
 end
 
 puts "Creating references..."
 
-10.times do
-  reference = Reference.create(
-    name: Faker::Name.name,
+5.times do
+  review = Review.new(
     content: Faker::Quote.famous_last_words,
+    name: Faker::Name.name
   )
+  review.package = Package.all.sample
+  review.save
 
-  puts "Created #{reference.id}..."
-end
+  puts "Created #{review.id} reviews..."
 
-puts "Creating services..."
-
-3.times do
-  service = Service.new(
-    name: Faker::Book.title,
-    description: Faker::Quote.famous_last_words,
-    price: rand(1000..15_000),
-  )
-
-  service.references = Reference.all.sample
-  service.save
-
-  puts "Created #{service.id}..."
 end
