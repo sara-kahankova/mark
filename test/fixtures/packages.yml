@@ -4,10 +4,8 @@ one:
   name: MyString
   price: 1
   description: MyText
-  reference: one
 
 two:
   name: MyString
   price: 1
   description: MyText
-  reference: two
