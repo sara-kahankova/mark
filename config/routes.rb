@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root to: 'pages#home'
+  resources :rentals, except: :destroy
+  resources :posts
+  resources :packages, except: :destroy do
+    resources :reviews, only: %i[show create new]
+  end
 end
