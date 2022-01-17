@@ -3,7 +3,7 @@
 
 <h4>This is a Ruby on rails app developed for a family real estate company Mark.</h4>
 
-<p>Its vision is to provide the company a tool for a better communication with its customers. It achieves this with a simple UI and functionalities like rentals listings or services catalogue.</p>
+<p>Its vision is to provide the company a tool for better communication with its customers. It achieves this with a simple UI and functionalities like rentals listings or services catalogue.</p>
 
 <h5>The user can:</h5>
 <ul>
@@ -27,7 +27,7 @@
 
 <h5>Technical stack:</h5>
 
-<spin>Backend: Ruby (Ruby on Rails 6)</spin>
+<spin>Backend: Ruby (Ruby on Rails 7)</spin>
 <br>
 <spin>Frontend: CSS, HTML, JS</spin>
 <br>
