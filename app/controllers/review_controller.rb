@@ -9,7 +9,7 @@ class ReviewController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.package = Package.find(params[:package_id])
+    @review.package = Package.find(params[:id])
     if @review.save
       redirect_to review_confirmation_path
     else
