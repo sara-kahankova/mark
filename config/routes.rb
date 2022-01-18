@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :packages, except: :destroy do
     resources :reviews, only: %i[show create new]
   end
+  get '/reviews/:id/confirmation', to: 'reviews#confirm', as: 'review_confirmation'
 end

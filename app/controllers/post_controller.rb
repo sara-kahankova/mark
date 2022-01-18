@@ -34,7 +34,7 @@ class PostController < ApplicationController
   private
 
   def find_post
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
   end
 
   def post_params
