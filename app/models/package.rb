@@ -3,5 +3,5 @@ class Package < ApplicationRecord
   validates :price, presence :true
   validates :description, presence :true
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 end
