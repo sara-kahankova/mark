@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[show create new]
   end
   get '/reviews/:id/confirmation', to: 'reviews#confirm', as: 'review_confirmation'
+  get "/about", to: "pages#about"
 end

@@ -1,3 +1,16 @@
+.navbar {
+  height: 100px;
+  justify-content: space-between;
+  border-bottom: solid;
+  border-bottom: solid 1px #4949492c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -9,4 +22,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-logo{
+  height: 95px;
+}
+
+.a{
+  text-decoration: none;
 }
