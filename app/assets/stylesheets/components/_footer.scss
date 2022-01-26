@@ -1,0 +1,34 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+}
+
+.footer {
+  margin-top: auto;
+  background: #494949;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgb(199, 199, 199);
+  border-top: solid 1px #4949492c;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
