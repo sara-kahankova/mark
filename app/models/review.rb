@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :package
-  validates :name, presence :
-  validates :content, presence :
+  validates :name, presence: true
+  validates :content, presence: true
 
 end
