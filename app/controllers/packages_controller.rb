@@ -1,4 +1,4 @@
-class PackageController < ApplicationController
+class PackagesController < ApplicationController
   before_action :find_package, only: %i(show edit update)
 
   def index

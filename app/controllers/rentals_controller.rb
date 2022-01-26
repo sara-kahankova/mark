@@ -1,5 +1,5 @@
-class RentalController < ApplicationController
-  before_create :find_rental, only: %i(show edit update)
+class RentalsController < ApplicationController
+  before_action :find_rental, only: %i(show edit update)
   def show; end
 
   def index
