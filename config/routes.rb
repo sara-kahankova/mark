@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   get '/reviews/:id/confirmation', to: 'reviews#confirm', as: 'review_confirmation'
   get "/about", to: "pages#about"
+  get "/faq", to: "pages#faq"
 end
