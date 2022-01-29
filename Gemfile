@@ -21,7 +21,12 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# debugging
 gem 'pry-byebug', '~> 3.9'
+
+# cloudinary
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
