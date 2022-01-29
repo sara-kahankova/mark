@@ -1,0 +1,21 @@
+<div class="rental-index mb-5">
+  <% @rentals.each_slice(4) do |slice| %>
+    <div class="row">
+      <% slice.each do |rental| %>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="house.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= rental.title %></h5>
+              <p class="card-text"><%= rental.description %></p>
+              <div class="card-btn">
+                <a href="#" class="btn btn-dark">View</a>
+              </div>
+            </div>
+             <%= link_to "", rental_path(rental), class: "stretched-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
