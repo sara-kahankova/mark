@@ -13,6 +13,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 puts "Cleaning database..."
 Post.destroy_all
@@ -34,7 +35,7 @@ end
 puts "Creating rentals..."
 
 5.times do
-  rental = Rental.create(
+  rental = Rental.new(
     title: Faker::Book.title,
     address: Faker::Address.street_address,
     description: Faker::Quote.famous_last_words,
@@ -42,6 +43,10 @@ puts "Creating rentals..."
     size: "#{rand(1..5)} + kk",
     city: Faker::Address.city
   )
+  image_url = "https://images.unsplash.com/photo-1551806235-a05dd14a54c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+  downloaded_image = URI.open(image_url)
+  rental.photo.attach(io: downloaded_image, filename: "rental-#{rental.id}")
+  rental.save
 
   puts "Created #{rental.id} rentals..."
 end
