@@ -1,6 +1,6 @@
 .navbar {
   height: 100px;
-  justify-content: space-between;
+  justify-content: space-between !important;
   border-bottom: solid;
   border-bottom: solid 1px #4949492c;
   position: sticky;
@@ -25,10 +25,18 @@
 }
 
 .navbar-logo{
-  height: 95px;
+  height: 295px;
 }
 
-.nav-link{
+.nav-link a{
+  text-decoration: none;
+  color: #63605F;
+  padding: 0 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.nav-link a:hover{
   text-decoration: none;
   color: black;
 }
