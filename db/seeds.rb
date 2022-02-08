@@ -34,14 +34,16 @@ end
 
 puts "Creating rentals..."
 
-5.times do
+50.times do
   rental = Rental.new(
-    title: Faker::Book.title,
-    address: Faker::Address.street_address,
-    description: Faker::Quote.famous_last_words,
+    title: Faker::Address.community,
+    address: Faker::Address.full_address,
+    description: Faker::Lorem.paragraphs,
     price: rand(5000..50000),
-    size: "#{rand(1..5)} + kk",
-    city: Faker::Address.city
+    size: rand(46..175),
+    city: Faker::Address.city,
+    bed: rand(0..5),
+    bath: rand(1..3)
   )
   image_url = "https://images.unsplash.com/photo-1551806235-a05dd14a54c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
   downloaded_image = URI.open(image_url)

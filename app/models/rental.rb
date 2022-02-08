@@ -5,5 +5,7 @@ class Rental < ApplicationRecord
   validates :price, presence: true
   validates :size, presence: true
   validates :city, presence: true
+  validates :bed, presence: true
+  validates :bath, presence: true
   has_one_attached :photo
 end

@@ -8,17 +8,14 @@
       <% slice.each do |rental| %>
         <div class="col">
           <div class="card" style="width: 18rem;">
-            <div class="cardbanner card-img-top"
-                style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80')"
-              >
-              <span><%= rental.title %></span>
+            <div class="cardbanner card-img-top">
+             <img class="card-img-top" src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" alt="Card image cap">
             </div>
             <div class="card-body">
-              <h5 class="card-title"><%= rental.title %></h5>
-              <p class="card-text"><%= rental.description %></p>
-              <div class="card-btn">
-                <a href="#" class="btn btn-dark">View</a>
-              </div>
+              <h5 class="card-title">CZK <%= rental.price %>/mo</h5>
+              <p class="card-text"><%= rental.size %> m² <%= rental.bed %> br <%= rental.bath %> ba</p>
+
+              <p class="card-text"><%= rental.address %></p>
             </div>
              <%= link_to "", rental_path(rental), class: "stretched-link" %>
           </div>
