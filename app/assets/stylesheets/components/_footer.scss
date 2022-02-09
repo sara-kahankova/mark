@@ -26,10 +26,22 @@ body{
 
 .footer-link a:hover{
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+a{
+  color: rgb(126, 126, 126);
+}
+.contactlink {
+  text-decoration: none;
+  color: #444444;
+}
+
+.contactlink:hover{
+  color: rgb(146, 146, 146);
+
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-bottom: 5px;
 }
