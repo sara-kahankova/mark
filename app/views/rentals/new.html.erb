@@ -1,8 +1,6 @@
-
-
 <div class="rental-container">
-  <div class="rental-form">
-    <div class="rental-form-content row row-cols-lg-auto">
+  <div class="rental-form row">
+    <div class="rental-form-content col-lg-6 col-sm-12">
       <%= simple_form_for @rental do |f| %>
         <div class="form-header mb-2">
           Create rental
@@ -31,11 +29,12 @@
         <div class="row col-12">
           <%= f.input :city, label: false, placeholder: "City" %>
         </div>
-        <div class="form-photo">
-          <%= f.input :photo, as: :file,
-                    required: true, label: "Add photo",
-                    id: "photo-btn" %>
+        <div class="flex-row row col-12">
+          <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" label="Add photo">
+          </div>
         </div>
+
         <div class="rental-form-btn">
           <%= f.submit "Create", class: "btn" %>
         </div>
