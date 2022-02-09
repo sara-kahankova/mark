@@ -1,0 +1,45 @@
+
+
+<div class="rental-container">
+  <div class="rental-form">
+    <div class="rental-form-content row row-cols-lg-auto">
+      <%= simple_form_for @rental do |f| %>
+        <div class="form-header mb-2">
+          Create rental
+        </div>
+        <div class="row col-12">
+          <%= f.input :title, label: false, placeholder: "Title" %>
+          <%= f.input :address, label: false, placeholder: "Address" %>
+          <%= f.input :description, label: false, placeholder: "Description" %>
+        </div>
+        <div class="flex-row row col-12">
+          <div class="col-lg-6 col-sm-12">
+            <%= f.input :price, label: false, placeholder: "Price of unit" %>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <%= f.input :size, label: false, placeholder: "Size" %>
+          </div>
+        </div>
+        <div class="flex-row row col-12">
+          <div class="col-lg-6 col-sm-12">
+            <%= f.input :bed, label: false, placeholder: "Number of bedrooms" %>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <%= f.input :bath, label: false, placeholder: "Number of bathrooms" %>
+          </div>
+        </div>
+        <div class="row col-12">
+          <%= f.input :city, label: false, placeholder: "City" %>
+        </div>
+        <div class="form-photo">
+          <%= f.input :photo, as: :file,
+                    required: true, label: "Add photo",
+                    id: "photo-btn" %>
+        </div>
+        <div class="rental-form-btn">
+          <%= f.submit "Create", class: "btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

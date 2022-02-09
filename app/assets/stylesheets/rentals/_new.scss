@@ -1,0 +1,62 @@
+.rental-form{
+  border: 1px;
+  border-color: rgb(3, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.rental-form-content {
+  background-color: rgba(230, 229, 229, 0.508);
+  padding: 2% 3%;
+  border-radius: 5px;
+  width: 45%;
+  margin-bottom: 3%;
+}
+
+.form-header {
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  color: rgb(46, 46, 46);
+  padding: 10px 0 10px 0;
+}
+
+.rental-form-content input {
+  border-radius: 2px;
+  margin: 10px 0px 10px 0px;
+  background-color: white;
+}
+
+.rental-form-content textarea {
+  border-radius: 2px;
+  color: white;
+  margin: 10px 0px 10px 0px;
+  background-color: white;
+}
+
+.rental-form-btn{
+  text-align: center;
+}
+
+.btn{
+  color: rgb(2, 2, 2);
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btn:hover{
+  color: rgb(36, 36, 36);
+}
+
+.flex-row{
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+#photo-btn{
+  background-color: #212529;
+}
