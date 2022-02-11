@@ -31,7 +31,15 @@
         </div>
         <div class="flex-row row col-12">
           <div class="input-group">
-            <input  type="file" class="form-control" name="photo" id="photo" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+             <%# <%= f.input :photo, as: :file,
+                    required: true, label: "Add photo",
+                    id: "photo-btn" %>
+            <div class="row col-12">
+              <label for="photo" class="photo-label">Add a photo:</label>
+            </div>
+            <input  type="file" class="form-control"
+            name="photo" id="photo" aria-describedby="inputGroupFileAddon04"
+            aria-label="Upload" accept="image/png, image/jpg">
           </div>
         </div>
 

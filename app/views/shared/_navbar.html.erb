@@ -1,10 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class = "flex-column col-md-3 col-lg-4 col-xl-3">
-    <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag("https://res.cloudinary.com/kahinek1999/image/upload/v1643680749/mark/logo_mark.png", class: "navbar-logo") %>
-    <% end %>
+    <div class="nav-logo navbar-brand">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag("https://res.cloudinary.com/kahinek1999/image/upload/v1643680749/mark/logo_mark.png", class: "navbar-logo") %>
+      <% end %>
+    </div>
   </div>
-
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <div class="collapse navbar-collapse flex-column justify-content-right col-md-3 col-lg-4 col-xl-3" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active nav-link"><%= link_to "Home", root_path %></li>

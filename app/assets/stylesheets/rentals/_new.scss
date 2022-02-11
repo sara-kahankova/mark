@@ -33,8 +33,11 @@
 
 .rental-form-content textarea {
   border-radius: 2px;
-  color: white;
   margin: 10px 0px 10px 0px;
+  background-color: white;
+}
+
+.form-control:focus{
   background-color: white;
 }
 
@@ -59,4 +62,7 @@
 
 #photo-btn{
   background-color: #212529;
+}
+.photo-label{
+  color: #6C757D;
 }
