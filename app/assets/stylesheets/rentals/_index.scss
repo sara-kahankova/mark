@@ -8,3 +8,15 @@ h1{
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.index-container {
+  display: flex;
+}
+
+#map {
+  height: 100vh;
+}
+
+.cards {
+  flex-grow: 1;
+}

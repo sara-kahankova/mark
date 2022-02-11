@@ -3,29 +3,39 @@
   <p><%= @rentals.count %> results</p>
 </div>
 
-<div class="rental-index mb-5">
-  <% @rentals.each_slice(4) do |slice| %>
-    <div class="row">
-      <% slice.each do |rental| %>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="cardbanner card-img-top">
-              <% if rental.photo.attached? %>
-                <img class="card-img-top" src="<%= cl_image_path rental.photo.key, height: 300, crop: :fill %>" alt="Card image cap">
-              <% else %>
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" alt="Card image cap">
-              <% end %>
+<div class="index-container">
+  <!-- cards -->
+  <div class="cards row">
+    <div class="rental-index mb-5">
+      <% @rentals.each_slice(4) do |slice| %>
+        <div class="row">
+          <% slice.each do |rental| %>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <div class="cardbanner card-img-top">
+                  <% if rental.photo.attached? %>
+                    <img class="card-img-top" src="<%= cl_image_path rental.photo.key, height: 300, crop: :fill %>" alt="Card image cap">
+                  <% else %>
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" alt="Card image cap">
+                  <% end %>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">CZK <%= rental.price %>/mo</h5>
+                  <p class="card-text"><%= rental.size %> m² <%= rental.bed %> bd <%= rental.bath %> ba</p>
+                  <p class="card-text"><%= rental.address %></p>
+                </div>
+                <%= link_to "", rental_path(rental), class: "stretched-link" %>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">CZK <%= rental.price %>/mo</h5>
-              <p class="card-text"><%= rental.size %> m² <%= rental.bed %> br <%= rental.bath %> ba</p>
-
-              <p class="card-text"><%= rental.address %></p>
-            </div>
-             <%= link_to "", rental_path(rental), class: "stretched-link" %>
-          </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
+  <!-- cards -->
+  <!-- map -->
+  <div id="map" class="row">
+    <img id="map" src='https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibWJlcmhlIiwiYSI6ImNrdnY4NHJtYjVpMnYydW51ajVyM2Q5eDYifQ.n2KysvByF4-gNtzaAIwbWQ'>
+  </div>
+  <!-- map -->
 </div>

@@ -1,9 +1,9 @@
 .navbar {
   height: 100px;
   justify-content: space-between !important;
-  border-bottom: solid;
   border-bottom: solid 1px #4949492c;
-  position: sticky;
+  border-top: solid 1px #4949492c;
+  // position: sticky;
   top: 0;
   z-index: 100;
   background-color: #ffffff;
@@ -11,21 +11,8 @@
   padding-right: 140px;
 }
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
 .navbar-logo{
-  height: 295px;
+  height: 100px;
 }
 
 .nav-link a{
@@ -43,4 +30,15 @@
 
 .navbar-nav{
   justify-content: space-between;
+}
+
+.nav-logo{
+  justify-content: center;
+}
+
+.navbar-brand {
+  position: relative;
+  width: 170px;
+  left: 15px;
+  background-size: contain;
 }
