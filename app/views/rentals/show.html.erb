@@ -1,1 +1,10 @@
-<h2>rental show</h2>
+<div class="page-title">
+  <h1 class="index-header"><%= @rental.title %></h1>
+</div>
+<div class="show-container">
+  <div class="row">
+    <div class="show-img">
+      <img class="" src="<%= cl_image_path @rental.photo.key, height: 100, crop: :fill %>" alt="">
+    </div>
+  </div>
+</div>
