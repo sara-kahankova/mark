@@ -2,9 +2,22 @@
   <h1 class="index-header"><%= @rental.title %></h1>
 </div>
 <div class="show-container">
-  <div class="row">
-    <div class="show-img">
-      <img class="" src="<%= cl_image_path @rental.photo.key, height: 100, crop: :fill %>" alt="">
+  <div>
+    <div class="row">
+      <div class="show-img">
+        <img class="" src="<%= cl_image_path @rental.photo.key, height: 100, crop: :fill %>" alt="">
+      </div>
+      <div class="map-box-show">
+      </div>
+    </div>
+    <div>
+      <div class="show-details">
+        <h5 class="">CZK <%= @rental.price %>/mo</h5>
+        <p class=""><%= @rental.size %> m² <br>
+        <%= @rental.bed %> bd <%= @rental.bath %> ba</p>
+        <p><%= @rental.address %></p>
+        <p><%= @rental.description %></p>
+      </div>
     </div>
   </div>
 </div>
